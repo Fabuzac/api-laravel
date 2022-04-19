@@ -8,15 +8,14 @@ use Illuminate\Http\Request;
 
 class AuthenticationController extends Controller
 {
-    public function register(Request $request, $user)
+    public function register(Request $request)
     {
-        dd($request->all());
-        User::create([
+        $user = User::create([
             'email' => $request->input('email'),
             'name' => $request->input('name'),
-            'name' => $request->input('password'),
-            // 'password' => bcrypt($request->input('password')),
-            // 'api_token' => Str::random(60),
+            'password' => $request->input('password'),
+            //'password' => bcrypt($request->input('password')),
+            'api_token' => Str::random(60),
         ]);
 
         return response()->json($user);
