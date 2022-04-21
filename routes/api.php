@@ -3,6 +3,7 @@
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::post('/register', [AuthenticationController::class, 'register']);
+Route::post('/register', [RegisterController::class, 'register']);
 
 Route::get('/ok', function() {
 	return 'test';
