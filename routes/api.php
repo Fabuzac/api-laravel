@@ -1,9 +1,7 @@
 <?php
 
-use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AuthenticationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +14,6 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::post('/register', [RegisterController::class, 'register']);
+Route::post('/register', [AuthenticationController::class, 'register']);
+Route::post('/login', [AuthenticationController::class, 'login']);
 
-Route::get('/ok', function() {
-	return 'test';
-});
