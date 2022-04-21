@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::apiResource('/register', [AuthenticationController::class, 'register']);
+// Route::apiResource('/register', [AuthenticationController::class, 'register']);
