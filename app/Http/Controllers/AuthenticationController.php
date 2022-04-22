@@ -23,7 +23,7 @@ class AuthenticationController extends Controller
         );
 
         if($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()]);
+            return response()->json(['errors' => $validator->errors()], 401);
         }
 
         // CREATE IN TABLE USER
@@ -49,7 +49,7 @@ class AuthenticationController extends Controller
         );
 
         if($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()]);
+            return response()->json(['errors' => $validator->errors()], 401);
         }
 
         // INPUT CHECK
@@ -60,7 +60,7 @@ class AuthenticationController extends Controller
             return response()->json($user);
 
         } else {
-            return response()->json(['errors' => 'Wrong login ID ']);
+            return response()->json(['errors' => 'Wrong login ID '], 401);
         };
     }
 }
