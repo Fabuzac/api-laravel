@@ -12,7 +12,6 @@ use App\Http\Requests\LoginRequest;
 
 class AuthenticationController extends Controller
 {
-
     public function register(Request $request, RegisterRequest $validation)
     {
         // API CHECK
@@ -60,7 +59,7 @@ class AuthenticationController extends Controller
             return response()->json($user);
 
         } else {
-            return response()->json(['errors' => 'Wrong login ID '], 401);
+            return response()->json(['errors' => 'Wrong login ID'], 401);
         };
     }
 }
