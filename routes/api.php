@@ -24,4 +24,4 @@ Route::get('/pictures', function() {
     return response()->json($picture);
 });
 
-Route::post('/pictures', [PictureController::class, 'store']);
+Route::post('/pictures', [PictureController::class, 'store'])->middleware('frontend');
