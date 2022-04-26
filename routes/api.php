@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
+use App\Models\Picture;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use App\Http\Controllers\AuthenticationController;
 
 Route::post('/register', [AuthenticationController::class, 'register']);
 Route::post('/login', [AuthenticationController::class, 'login']);
+
+Route::get('/pictures', function() {
+    $picture = Picture::all();
+    return response()->json($picture);
+});
