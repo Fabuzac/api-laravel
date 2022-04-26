@@ -11,7 +11,7 @@ class Picture extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'description', 'image'
+        'title', 'description', 'image', 'user_id'
     ];
 
     protected $with = [

@@ -14,7 +14,7 @@ class AuthenticationController extends Controller
 {
     public function register(Request $request, RegisterRequest $validation)
     {
-        // API CHECK
+        // CHECK FORM INPUT
         $validator = Validator::make(
             $request->all(), 
             $validation->rules(), 
@@ -40,7 +40,7 @@ class AuthenticationController extends Controller
     {
         $email = $request->input('email');
 
-        // API CHECK
+        // CHECK FORM INPUT
         $validator = Validator::make(
             $request->all(), 
             $validation->rules(), 

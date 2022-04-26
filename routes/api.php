@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\PictureController;
 use App\Models\Picture;
 
 /*
@@ -22,3 +23,5 @@ Route::get('/pictures', function() {
     $picture = Picture::all();
     return response()->json($picture);
 });
+
+Route::post('/pictures', [PictureController::class, 'store']);
