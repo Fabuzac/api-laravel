@@ -22,6 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
         'api_token',
+        'provider',
+        'provider_id'
     ];
 
     /**
@@ -46,5 +48,10 @@ class User extends Authenticatable
     public function pictures()
     {
         return $this->hasMany(Picture::class);
+    }
+
+    public function liked()
+    {
+        return $this->belongsTo(Picture::class);
     }
 }

@@ -19,6 +19,8 @@ use App\Models\Picture;
 Route::post('/register', [AuthenticationController::class, 'register']);
 Route::post('/login', [AuthenticationController::class, 'login']);
 
-Route::get('/pictures', [PictureController::class, 'index']);
+Route::post('/pictures', [PictureController::class, 'search']);
 Route::get('/pictures/{id}', [PictureController::class, 'show'])->middleware('frontend');
-Route::post('/pictures', [PictureController::class, 'store'])->middleware('frontend');
+Route::post('/pictures/store', [PictureController::class, 'store'])->middleware('frontend');
+Route::get('/pictures/{id}/checkLike', [PictureController::class, 'checklike'])->middleware('frontend');
+Route::get('/pictures/{id}/handleLike', [PictureController::class, 'handleLike'])->middleware('frontend');

@@ -22,4 +22,9 @@ class Picture extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function likes()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
