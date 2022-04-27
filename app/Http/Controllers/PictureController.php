@@ -10,6 +10,14 @@ use Illuminate\Support\Facades\Validator;
 
 class PictureController extends Controller
 {
+
+    public function index()
+    {
+        $pictures = Picture::all();
+
+        return response()->json($pictures);
+    }
+
     public function store(Request $request, PictureRequest $validation)
     {
         // CHECK INPUT AND FILE PICTURE

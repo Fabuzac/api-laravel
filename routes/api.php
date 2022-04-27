@@ -19,9 +19,5 @@ use App\Models\Picture;
 Route::post('/register', [AuthenticationController::class, 'register']);
 Route::post('/login', [AuthenticationController::class, 'login']);
 
-Route::get('/pictures', function() {
-    $picture = Picture::all();
-    return response()->json($picture);
-});
-
+Route::get('/pictures', [PictureController::class, 'index']);
 Route::post('/pictures', [PictureController::class, 'store'])->middleware('frontend');
