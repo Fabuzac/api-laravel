@@ -20,4 +20,5 @@ Route::post('/register', [AuthenticationController::class, 'register']);
 Route::post('/login', [AuthenticationController::class, 'login']);
 
 Route::get('/pictures', [PictureController::class, 'index']);
+Route::get('/pictures/{id}', [PictureController::class, 'show'])->middleware('frontend');
 Route::post('/pictures', [PictureController::class, 'store'])->middleware('frontend');

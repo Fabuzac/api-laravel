@@ -18,6 +18,17 @@ class PictureController extends Controller
         return response()->json($pictures);
     }
 
+    public function show($id)
+    {
+        $picture = Picture::find($id);
+
+        if(!$picture) {
+            return response()->json(['message' => 'Ressource not found'], 403);
+        }
+
+        return response()->json($picture);
+    }
+
     public function store(Request $request, PictureRequest $validation)
     {
         // CHECK INPUT AND FILE PICTURE
