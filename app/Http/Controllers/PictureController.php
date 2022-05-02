@@ -105,4 +105,14 @@ class PictureController extends Controller
 
         return response()->json(['success' => 'Picture Liked'], 200);
     }
+
+
+    public function destroy($id)
+    {
+        $picture = Picture::find($id);
+
+        $picture->delete();
+
+        return response()->json(['success' => 'Picture Deleted'], 200);
+    }
 }

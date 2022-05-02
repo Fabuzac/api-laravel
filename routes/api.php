@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\PictureController;
-use App\Models\Picture;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +23,4 @@ Route::get('/pictures/{id}', [PictureController::class, 'show'])->middleware('fr
 Route::post('/pictures/store', [PictureController::class, 'store'])->middleware('frontend');
 Route::get('/pictures/{id}/checkLike', [PictureController::class, 'checklike'])->middleware('frontend');
 Route::get('/pictures/{id}/handleLike', [PictureController::class, 'handleLike'])->middleware('frontend');
+Route::delete('/pictures/{id}/delete', [PictureController::class, 'destroy']);
