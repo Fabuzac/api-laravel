@@ -7,4 +7,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-<p>API Laravel Back For Front in React APP repository</p>
+
+<p align="center">
+    <p>API Laravel Back For Front in React APP repository</p>
+    <img src="public\002.PNG" width="400">
+</p>
