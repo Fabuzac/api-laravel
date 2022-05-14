@@ -8,7 +8,7 @@
 </p>
 
 
-<p align="center">
+<div align="center">
     <p>API Laravel Back For Front in React APP repository</p>
-    <img src="public\002.PNG" width="400">
-</p>
+    <img src="public\002.PNG" width="800">
+</div>
