@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PictureController;
+use App\Http\Controllers\AuthenticationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::post('/pictures/store', [PictureController::class, 'store'])->middleware(
 Route::get('/pictures/{id}/checkLike', [PictureController::class, 'checklike'])->middleware('frontend');
 Route::get('/pictures/{id}/handleLike', [PictureController::class, 'handleLike'])->middleware('frontend');
 Route::delete('/pictures/{id}/delete', [PictureController::class, 'destroy']);
+
+Route::get('/users', [UserController::class, 'index']);
+Route::get('/user', [UserController::class, 'userLogged']);
